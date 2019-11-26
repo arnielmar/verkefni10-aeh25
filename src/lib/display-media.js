@@ -1,12 +1,12 @@
-import getRandomImage from "./nasa-api";
 import { empty, el } from "./helpers";
+import getRandomImage from "./nasa-api";
 import { save, load } from "./storage";
 
 // breytur til þess að halda utan um html element nodes
-let title; // titill fyrir mynd á forsíðu
-let text; // texti fyrir mynd á forsíðu
-let img; // mynd á forsíðu
-let image; // object sem inniheldur núverandi mynd á forsíðu.
+let title;
+let text;
+let img;
+let image;
 
 /*
  * Sækir nýja Mynd af handahófi frá Nasa API og birtir hana á forsíðunni
@@ -60,11 +60,11 @@ export function loadFavourites() {
     const element = el('section',
       el('h2', i.title),
       el('img'));
-    
+
     element.classList.add('apod');
     element.querySelector('h2').classList.add('apod__title');
     element.querySelector('img').classList.add('apod__image');
-    element.querySelector('img').setAttribute('src', i.mediaurl);
+    element.querySelector('img').setAttribute('src', i.mediaUrl);
     main.appendChild(element);
-  })
+  });
 }

@@ -18,7 +18,7 @@ const URL = 'https://api.nasa.gov/planetary/apod';
 export default async function getRandomImage() {
   const randomDate = getRandomDate(new Date(1995, 5, 16, 0, 0, 0), new Date());
 
-  const formattedDate = `${randomDate.getFullYear()}-${randomDate.getMonth() + 1}-${randomDate.getDate}`;
+  const formattedDate = `${randomDate.getFullYear()}-${randomDate.getMonth() + 1}-${randomDate.getDate()}`;
 
   const response = await fetch(`${URL}?api_key=${API_KEY}&date=${formattedDate}`);
 
