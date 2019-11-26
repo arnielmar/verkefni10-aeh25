@@ -38,3 +38,13 @@ export function el(name, ...children) {
 export function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+/**
+ * Skilar dagsetningu af handahófi á bilinu [min, max] 
+ * 
+ * @param {Date} min 
+ * @param {Date} max 
+ */
+export function getRandomDate(min, max) {
+  return new Date(min.getTime() + Math.random() * (max.getTime() - min.getTime()));
+}
